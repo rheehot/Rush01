@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:17:34 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/02/01 14:51:34 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/01 16:08:20 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 ** ft_handle_exception = it checks everything and if string doesn't have error
 ** return 1, else return 0 and error message
 */
-#include <unistd.h>
+
+#include "header.h"
 
 int		ft_argc_check(int argc)
 {
@@ -102,7 +103,7 @@ int		ft_handle_exception(int argc, char *argv[])
 	}
 	if (ft_length_check(argv) == 0)
 	{
-		write(1, "Your string is too long or too short", 35);
+		write(1, "Your string is too long or too short", 36);
 		return (0);
 	}
 	if (ft_range_check(argv) == 0)
