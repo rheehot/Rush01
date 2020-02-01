@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:17:34 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/01/31 15:21:28 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/01 14:51:34 by sjaehyeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		ft_range_check(char **argv)
 	i = 0;
 	while (i < 32)
 	{
-		if (argv[1][i] <= '1' || argv[1][i] >= '4')
+		if (argv[1][i] < '1' || argv[1][i] > '4')
 		{
 			return (0);
 		}
@@ -102,7 +102,7 @@ int		ft_handle_exception(int argc, char *argv[])
 	}
 	if (ft_length_check(argv) == 0)
 	{
-		write(1, "Your string is too long or too short", 36);
+		write(1, "Your string is too long or too short", 35);
 		return (0);
 	}
 	if (ft_range_check(argv) == 0)
