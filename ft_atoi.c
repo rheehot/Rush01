@@ -6,12 +6,12 @@
 /*   By: sanhan <sanhan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 13:03:07 by sanhan            #+#    #+#             */
-/*   Updated: 2020/02/01 13:23:47 by sanhan           ###   ########.fr       */
+/*   Updated: 2020/02/01 14:23:56 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-
-void	ft_atoi(char *str, int (*udlr)[4])
+#include <stdlib.h>
+void	ft_atoi(char *str, int **udlr)
 {
 	int i;
 
@@ -29,8 +29,16 @@ void	ft_atoi(char *str, int (*udlr)[4])
 int main(void)
 {
 	char a[] = "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2";
-	int udlr[4][4];
+	int **udlr;
 	int i, j;
+
+	udlr = (int **)malloc(sizeof(int *) * 4);
+	i = 0;
+	while(i <4)
+	{
+		udlr[i++] = (int *)malloc(sizeof(int) * 4);
+	}
+
 	ft_atoi(a, udlr);
 	for (i = 0; i < 4; i++)
 	{
