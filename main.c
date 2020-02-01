@@ -6,7 +6,7 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:52:00 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/01 16:39:21 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/01 16:44:37 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		main(int argc, char *argv[])
 	while (i < 4)
 		udlr[i++] = (int *)malloc(sizeof(int) * 4);
 	ft_atoi(argv[1], udlr);
-	result = ft_stack_box(0);
+	result = ft_stack_box(0, udlr, ans);
 	if (result)
 		ft_print_box(ans);
 	else

@@ -1,4 +1,16 @@
-int row_check(int index, int **udlr, int *ans)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rl_check.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/01 17:14:11 by seongpar          #+#    #+#             */
+/*   Updated: 2020/02/01 17:17:52 by seongpar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_row_check(int index, int **udlr, int *ans)
 {
 	int i;
 	int r_value;
@@ -11,11 +23,11 @@ int row_check(int index, int **udlr, int *ans)
 	{
 		while (i > 0)
 		{
-		if (ans[index - i ] < ans[index - i + 1])
-			l_value++;
-		if (ans[index - i ] > ans[index - i +1])
-			r_value++;
-		i--;
+			if (ans[index - i] < ans[index - i + 1])
+				l_value++;
+			if (ans[index - i] > ans[index - i + 1])
+				r_value++;
+			i--;
 		}
 		if (l_value == udlr[2][index / 4] && r_value == udlr[3][index / 4])
 			return (1);
@@ -25,7 +37,7 @@ int row_check(int index, int **udlr, int *ans)
 	return (1);
 }
 
-int column_check(int index, int **udlr, int *ans)
+int	ft_column_check(int index, int **udlr, int *ans)
 {
 	int i;
 	int u_value;
@@ -38,11 +50,11 @@ int column_check(int index, int **udlr, int *ans)
 	{
 		while (i < 3)
 		{
-		if (ans[index - 12 + (4 * i)] < ans[index - 8 + (4 * i)])
-			u_value++;
-		if (ans[index - 12 + 4 * i ] > ans[index - 8 + (4 * i)])
-			d_value++;
-		i++;
+			if (ans[index - 12 + (4 * i)] < ans[index - 8 + (4 * i)])
+				u_value++;
+			if (ans[index - 12 + 4 * i] > ans[index - 8 + (4 * i)])
+				d_value++;
+			i++;
 		}
 		if (u_value == udlr[0][index % 12] && d_value == udlr[1][index % 12])
 			return (1);
