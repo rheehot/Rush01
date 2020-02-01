@@ -6,7 +6,7 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 07:36:27 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/01 10:08:17 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/01 18:31:12 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,24 @@
 int	ft_stack_box(int index, int *udlr[], int *ans)
 {
 	int j;
-
-	if (ft_check(index, udlr, ans))
+	
+	ft_print_box(ans);
+	write(1, "\n", 1);
+	
+	if (index == 16)
+		return (1);
+	else
 	{
-		if (index == 16)
-			return (1);
-		else
+		j = 1;
+		while (j <= 4)
 		{
-			j = 1;
-			while (j <= 4)
-			{
-				ans[index] = j++;
-				if (ft_stack_box(index + 1, udlr, ans))
-					return (1);
-			}
+			ans[index] = j++;
+			if (!ft_check(index, udlr, ans))
+				continue;
+			if (ft_stack_box(index + 1, udlr, ans))
+				return (1);
 		}
 	}
+	
 	return (0);
 }
