@@ -6,9 +6,13 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 10:24:47 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/02/01 10:46:02 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/02 11:19:31 by sjaehyeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** ft_print_box is a function that prints the answer according to its format
+*/
 
 #include "header.h"
 
