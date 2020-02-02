@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:44:38 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/02 11:06:20 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/02 11:16:41 by sjaehyeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** ft_check is a function that combines two check functions.
+*/
 
 #include "header.h"
 

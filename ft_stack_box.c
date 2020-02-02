@@ -3,12 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stack_box.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 07:36:27 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/02 11:06:14 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/02 11:17:42 by sjaehyeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** ft_stack_box is a function that builds boxes through the checks functions,
+** recursive and backtracking and call ft_print_box if there is an answer,
+** and print ERROR if there is no answer.
+*/
 
 #include "header.h"
 
