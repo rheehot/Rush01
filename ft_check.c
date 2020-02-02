@@ -20,9 +20,7 @@ int	ft_check(int index, int *udlr[], int *ans)
 {
 	if (!ft_1234check(index, ans))
 		return (0);
-	if (!ft_column_check(index, udlr, ans))
-		return (0);
-	if (!ft_row_check(index, udlr, ans))
+	if (!ft_udlr_check(index, udlr, ans))
 		return (0);
 	return (1);
 }
