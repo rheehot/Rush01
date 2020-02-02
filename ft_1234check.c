@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:14:35 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/02/01 15:38:24 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/02 09:38:48 by sjaehyeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_1234check(int index, int *ans)
 		}
 	}
 	l = 4;
-	while (k >= 0)
+	while (k >= -8)
 	{
 		if (ans[index] == ans[index - l])
 		{
