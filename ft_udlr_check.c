@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 11:40:35 by sanhan            #+#    #+#             */
-/*   Updated: 2020/02/02 11:47:43 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/02 11:50:54 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 ** end of a row and up to upper and lower input values in the last row
 */
 
-int		r_check(int index, int (*udlr)[4], int *ans)
+#include "header.h"
+
+int		r_check(int index, int *udlr[], int *ans)
 {
 	int i;
 	int r_value;
@@ -43,7 +45,7 @@ int		r_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int		l_check(int index, int (*udlr)[4], int *ans)
+int		l_check(int index, int *udlr[], int *ans)
 {
 	int i;
 	int l_value;
@@ -71,7 +73,7 @@ int		l_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int		u_check(int index, int (*udlr)[4], int *ans)
+int		u_check(int index, int *udlr[], int *ans)
 {
 	int i;
 	int u_value;
@@ -99,7 +101,7 @@ int		u_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int		d_check(int index, int (*udlr)[4], int *ans)
+int		d_check(int index, int *udlr[], int *ans)
 {
 	int i;
 	int d_value;
@@ -127,7 +129,7 @@ int		d_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int		ft_udlr_check(int index, int (*udlr)[4], int *ans)
+int		ft_udlr_check(int index, int *udlr[], int *ans)
 {
 	if (u_check(index, udlr, ans) && d_check(index, udlr, ans)
 			&& l_check(index, udlr, ans) && r_check(index, udlr, ans))
