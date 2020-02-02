@@ -6,7 +6,7 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:52:00 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/01 16:44:37 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/01 17:52:52 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@ void	ft_free(int *ans, int **udlr)
 	free(udlr);
 }
 
+void	init(int *ans)
+{
+	int i;
+
+	i = 0;
+	while(i < 16)
+		ans[i++] = 0;
+}
+
 int		main(int argc, char *argv[])
 {
 	int result;
@@ -33,6 +42,9 @@ int		main(int argc, char *argv[])
 	if (ft_handle_exception(argc, argv) == 0)
 		return (0);
 	ans = (int *)malloc(sizeof(int) * 16);
+
+	init(ans);
+
 	udlr = (int **)malloc(sizeof(int *) * 4);
 	i = 0;
 	while (i < 4)
