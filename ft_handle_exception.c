@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 12:17:34 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/02/01 16:08:20 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/02 13:14:00 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,22 +93,22 @@ int		ft_handle_exception(int argc, char *argv[])
 {
 	if (ft_argc_check(argc) == 0)
 	{
-		write(1, "You didn't give right arguments", 31);
+		write(1, "You didn't give right arguments\n", 32);
 		return (0);
 	}
 	if (ft_shape_check(argv) == 0)
 	{
-		write(1, "Your string is ugly", 19);
+		write(1, "Your string is ugly\n", 20);
 		return (0);
 	}
 	if (ft_length_check(argv) == 0)
 	{
-		write(1, "Your string is too long or too short", 36);
+		write(1, "Your string is too long or too short\n", 37);
 		return (0);
 	}
 	if (ft_range_check(argv) == 0)
 	{
-		write(1, "Your string contains integer too big or small", 45);
+		write(1, "Your string contains integer too big or small\n", 46);
 		return (0);
 	}
 	return (1);

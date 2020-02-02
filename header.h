@@ -6,13 +6,12 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 10:38:20 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/02 11:51:40 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/02 13:14:40 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_H
 # define HEADER_H
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 
