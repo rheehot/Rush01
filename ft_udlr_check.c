@@ -1,6 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_udlr_check.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sanhan <sanhan@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/02 11:40:35 by sanhan            #+#    #+#             */
+/*   Updated: 2020/02/02 11:43:15 by sanhan           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int r_check(int index, int (*udlr)[4], int *ans)
+int	r_check(int index, int (*udlr)[4], int *ans)
 {
 	int i;
 	int r_value;
@@ -28,7 +38,7 @@ int r_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int l_check(int index, int (*udlr)[4], int *ans)
+int	l_check(int index, int (*udlr)[4], int *ans)
 {
 	int i;
 	int l_value;
@@ -43,7 +53,7 @@ int l_check(int index, int (*udlr)[4], int *ans)
 		{
 			if (temp < ans[index - 3 + i])
 			{
-				temp = ans[index  - 3 + i];
+				temp = ans[index - 3 + i];
 				l_value++;
 			}
 			i++;
@@ -56,7 +66,7 @@ int l_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int u_check(int index, int (*udlr)[4], int *ans)
+int	u_check(int index, int (*udlr)[4], int *ans)
 {
 	int i;
 	int u_value;
@@ -66,7 +76,7 @@ int u_check(int index, int (*udlr)[4], int *ans)
 	u_value = 1;
 	if (index == 12 || index == 13 || index == 14 || index == 15)
 	{
-		temp = ans[index - 12 + (4 * i)];;
+		temp = ans[index - 12 + (4 * i)];
 		while (i < 3)
 		{
 			if (temp < ans[index - 8 + (4 * i)])
@@ -84,7 +94,7 @@ int u_check(int index, int (*udlr)[4], int *ans)
 	return (1);
 }
 
-int d_check(int index, int (*udlr)[4], int *ans)
+int	d_check(int index, int (*udlr)[4], int *ans)
 {
 	int i;
 	int d_value;
@@ -114,36 +124,10 @@ int d_check(int index, int (*udlr)[4], int *ans)
 
 int	ft_udlr_check(int index, int (*udlr)[4], int *ans)
 {
-
-	printf("%d\n", u_check(index, udlr, ans));
-	printf("%d\n", d_check(index, udlr, ans));
-	printf("%d\n", l_check(index, udlr, ans));
-	printf("%d\n", r_check(index, udlr, ans));
-	
-	if (u_check(index, udlr, ans) && d_check(index, udlr, ans) 
+	if (u_check(index, udlr, ans) && d_check(index, udlr, ans)
 			&& l_check(index, udlr, ans) && r_check(index, udlr, ans))
 	{
 		return (1);
 	}
 	return (0);
-}
-
-int main(void)
-{
-	int ans[] = {
-				1, 2, 3, 4,
-	   		   	2, 3, 4, 1, 
-				3, 4, 1, 2, 
-				4, 1, 2, 3
-				};
-	int index = 14;
-	int udlr[4][4] = {
-					4, 3, 2, 1, 
-					1, 2, 1, 2,
-					4, 3, 2, 1, 
-					1, 2, 2, 2
-					};
-	printf("index 			: %d\n", index);
-	printf("udlr_check 	: %d\n", ft_udlr_check(index, udlr, ans));
-	return 0;
 }
