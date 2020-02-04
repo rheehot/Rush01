@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 07:36:27 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/02 11:17:42 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:03:02 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	ft_stack_box(int index, int *udlr[], int *ans)
 {
 	int j;
 
-	if (index == 16)
+	if (index == N * N)
 		return (1);
 	else
 	{
 		j = 1;
-		while (j <= 4)
+		while (j <= N)
 		{
 			ans[index] = j++;
 			if (!ft_check(index, udlr, ans))

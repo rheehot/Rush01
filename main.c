@@ -6,7 +6,7 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:52:00 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/02 13:16:39 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:04:22 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_free(int *ans, int **udlr)
 
 	i = 0;
 	free(ans);
-	while (i < 4)
+	while (i < N)
 		free(udlr[i++]);
 	free(udlr);
 }
@@ -32,11 +32,11 @@ int		main(int argc, char *argv[])
 
 	if (ft_handle_exception(argc, argv) == 0)
 		return (0);
-	ans = (int *)malloc(sizeof(int) * 16);
-	udlr = (int **)malloc(sizeof(int *) * 4);
+	ans = (int *)malloc(sizeof(int) * N * N);
+	udlr = (int **)malloc(sizeof(int *) * N);
 	i = 0;
-	while (i < 4)
-		udlr[i++] = (int *)malloc(sizeof(int) * 4);
+	while (i < N)
+		udlr[i++] = (int *)malloc(sizeof(int) * N);
 	ft_atoi(argv[1], udlr);
 	result = ft_stack_box(0, udlr, ans);
 	if (result)
