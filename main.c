@@ -6,7 +6,7 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:52:00 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/04 18:04:22 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:28:33 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ int		main(int argc, char *argv[])
 	int *ans;
 	int i;
 
-	if (ft_handle_exception(argc, argv) == 0)
-		return (0);
+	//if (ft_handle_exception(argc, argv) == 0)
+	//	return (0);
 	ans = (int *)malloc(sizeof(int) * N * N);
 	udlr = (int **)malloc(sizeof(int *) * N);
 	i = 0;
