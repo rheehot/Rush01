@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:14:35 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/02/04 18:22:49 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:33:32 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 **down, left and right sides.
 */
 
-#include <stdio.h>
+#include "header.h"
 
 int		ft_1234check(int index, int *ans)
 {

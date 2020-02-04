@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 11:40:35 by sanhan            #+#    #+#             */
-/*   Updated: 2020/02/04 18:27:34 by sanhan           ###   ########.fr       */
+/*   Updated: 2020/02/04 18:36:19 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ int		l_check(int index, int *udlr[], int *ans)
 			else
 				return (0);
 		}
+		j++;
 	}
 	return (1);
 }
@@ -104,7 +105,7 @@ int		u_check(int index, int *udlr[], int *ans)
 			}
 			i++;
 		}
-		if (u_value == udlr[0][index % (N * N - N)]
+		if (u_value == udlr[0][index % (N * N - N)])
 			return (1);
 		else
 			return (0);

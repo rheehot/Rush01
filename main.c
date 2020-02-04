@@ -6,7 +6,7 @@
 /*   By: seongpar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 15:52:00 by seongpar          #+#    #+#             */
-/*   Updated: 2020/02/04 18:28:33 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:37:25 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		main(int argc, char *argv[])
 		ft_print_box(ans);
 	else
 		write(1, "No Answer\n", 10);
+	argc++;
 	ft_free(ans, udlr);
 	return (0);
 }
