@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/01 10:24:47 by sjaehyeo          #+#    #+#             */
-/*   Updated: 2020/02/02 11:19:31 by sjaehyeo         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:22:27 by sjaehyeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,21 @@ void	ft_putchar(char c)
 void	ft_print_box(int *ans)
 {
 	int i;
-
+	int j;
+	
 	i = 0;
-	while (i < 16)
+	j = 1;
+	while (i < N * N)
 	{
-		if (i != 3 && i != 7 && i != 11 && i != 15)
+		ft_putchar(ans[i] + '0');
+		if (i % N == (N - 1))
 		{
-			ft_putchar(ans[i] + '0');
-			ft_putchar(' ');
-		}
-		if (i == 3 || i == 7 || i == 11 || i == 15)
-		{
-			ft_putchar(ans[i] + '0');
 			ft_putchar('\n');
 		}
+		else
+		{
+			ft_putchar(' ');
+		}
 		i++;
-	}
+	}∂
 }
