@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 11:40:35 by sanhan            #+#    #+#             */
-/*   Updated: 2020/02/04 18:36:19 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:48:04 by seongpar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		l_check(int index, int *udlr[], int *ans)
 	i = 1;
 	j = 1;
 	l_value = 1;
-	while (j < N)
+	while (j <= N)
 	{
 		if (index == j * N - 1)
 		{
