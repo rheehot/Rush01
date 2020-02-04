@@ -6,7 +6,7 @@
 /*   By: sjaehyeo <sjaehyeo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/02 11:40:35 by sanhan            #+#    #+#             */
-/*   Updated: 2020/02/04 18:05:31 by seongpar         ###   ########.fr       */
+/*   Updated: 2020/02/04 18:27:34 by sanhan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,33 @@
 int		r_check(int index, int *udlr[], int *ans)
 {
 	int i;
+	int j;
 	int r_value;
 	int temp;
 
 	i = 1;
+	j = 1;
 	r_value = 1;
-	if (index == 3 || index == 7 || index == 11 || index == 15)
+	while (j <= N)
 	{
-		temp = ans[index];
-		while (i < 4)
+		if (index == j * N - 1)
 		{
-			if (temp < ans[index - i])
+			temp = ans[index];
+			while (i < N)
 			{
-				temp = ans[index - i];
-				r_value++;
+				if (temp < ans[index - i])
+				{
+					temp = ans[index - i];
+					r_value++;
+				}
+				i++;
 			}
-			i++;
+			if (r_value == udlr[3][index / N])
+				return (1);
+			else
+				return (0);
 		}
-		if (r_value == udlr[3][index / 4])
-			return (1);
-		else
-			return (0);
+		j++;
 	}
 	return (1);
 }
@@ -48,27 +54,32 @@ int		r_check(int index, int *udlr[], int *ans)
 int		l_check(int index, int *udlr[], int *ans)
 {
 	int i;
+	int j;
 	int l_value;
 	int temp;
 
 	i = 1;
+	j = 1;
 	l_value = 1;
-	if (index == 3 || index == 7 || index == 11 || index == 15)
+	while (j < N)
 	{
-		temp = ans[index - 3];
-		while (i < 4)
+		if (index == j * N - 1)
 		{
-			if (temp < ans[index - 3 + i])
+			temp = ans[index - (N - 1)];
+			while (i < N)
 			{
-				temp = ans[index - 3 + i];
-				l_value++;
+				if (temp < ans[index - (N - 1) + i])
+				{
+					temp = ans[index - (N - 1) + i];
+					l_value++;
+				}
+				i++;
 			}
-			i++;
+			if (l_value == udlr[2][index / N])
+				return (1);
+			else
+				return (0);
 		}
-		if (l_value == udlr[2][index / 4])
-			return (1);
-		else
-			return (0);
 	}
 	return (1);
 }
@@ -81,19 +92,19 @@ int		u_check(int index, int *udlr[], int *ans)
 
 	i = 0;
 	u_value = 1;
-	if (index == 12 || index == 13 || index == 14 || index == 15)
+	while (index % N == (N - 1))
 	{
-		temp = ans[index - 12 + (4 * i)];
-		while (i < 3)
-		{
-			if (temp < ans[index - 8 + (4 * i)])
+		temp = ans[index - (N * N - N) + (N * i)];
+		while (i < (N - 1))
+	{
+			if (temp < ans[index - N * N + (N * i)])
 			{
-				temp = ans[index - 8 + (4 * i)];
+				temp = ans[index - N * N + (N * i)];
 				u_value++;
 			}
 			i++;
 		}
-		if (u_value == udlr[0][index % 12])
+		if (u_value == udlr[0][index % (N * N - N)]
 			return (1);
 		else
 			return (0);
@@ -109,19 +120,19 @@ int		d_check(int index, int *udlr[], int *ans)
 
 	i = 0;
 	d_value = 1;
-	if (index == 12 || index == 13 || index == 14 || index == 15)
+	while (index % N == (N - 1))
 	{
 		temp = ans[index];
-		while (i < 3)
+		while (i < (N - 1))
 		{
-			if (temp < ans[index - 4 - (4 * i)])
+			if (temp < ans[index - N - (N * i)])
 			{
-				temp = ans[index - 4 - (4 * i)];
+				temp = ans[index - N - (N * i)];
 				d_value++;
 			}
 			i++;
 		}
-		if (d_value == udlr[1][index % 12])
+		if (d_value == udlr[1][index % (N * N - N)])
 			return (1);
 		else
 			return (0);
