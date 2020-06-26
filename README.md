@@ -1,10 +1,12 @@
 # Rush01
 
-42서울 **Rush01** 팀 프로젝트
+42서울 **Rush01** 팀 프로젝트 
+
+기간 : 2/1(토) - 2/2(일)
 
 ## 구성원
 
-### 박성민 (seongpar)
+### 팀장 : 박성민 (seongpar)
 
 git id : [mimseong](https://github.com/mimseong)
 
